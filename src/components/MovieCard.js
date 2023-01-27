@@ -8,12 +8,13 @@ const saveMovie = async() =>{
 
         const currentValue =  await localStorage.getItem('movies')
         await localStorage.setItem(`${movie.title}`, (currentValue ? currentValue + JSON.stringify(movie):JSON.stringify(movie) ))
-        
+        alert('Movie saved! Checkout the saved item')
         
   }
 
   const resetMovie = async() => {
         await localStorage.removeItem(`${movie.title}`)
+        alert('Movie removed! Checkout the saved item')
   }
 
   
